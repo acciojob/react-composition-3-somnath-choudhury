@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import "./../styles/Tooltip.css";
+import "../styles/Tooltip.css"
 
 function Tooltip({ text, children }) {
   const [visible, setVisible] = useState(false);
-        // console.log(children);
 
   return (
     <div
@@ -12,8 +11,7 @@ function Tooltip({ text, children }) {
       onMouseLeave={() => setVisible(false)}
     >
       {children}
-      {visible && <span className="tooltiptext">{text}</span>}
-      
+      {visible && <div className="tooltiptext">{text}</div>}
     </div>
   );
 }
